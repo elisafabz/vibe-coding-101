@@ -92,6 +92,10 @@ cp -R skills/explain-before-acting ~/.claude/skills/
 
 Both skills only run when you invoke them (`disable-model-invocation: true`) and are set to the cheapest model (`haiku`, low effort).
 
+## Ready to build? Start from a safe base
+
+The [react-supabase-boilerplate](https://github.com/elisafabz/react-supabase-boilerplate) is a React, Vite, Tailwind, shadcn/ui and Supabase starter that applies these rules from the first commit: business logic in Edge Functions, security headers, tests, CI, and a launch checklist.
+
 ## Why hooks and not just prompts?
 
 You could ask the AI nicely to "never write secrets into code" - but prompts get forgotten, and one bad moment is enough. Hooks are enforced by the harness itself, on every single tool call, no exceptions. That's the difference between a habit and a guardrail.
