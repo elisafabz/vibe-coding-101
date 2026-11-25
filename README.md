@@ -105,7 +105,7 @@ Both skills only run when you invoke them (`disable-model-invocation: true`) and
 
 ## Ready to build? Start from a safe base
 
-The [react-supabase-boilerplate](https://github.com/elisafabz/react-supabase-boilerplate) is a React, Vite, Tailwind, shadcn/ui and Supabase starter that applies these rules from the first commit: business logic in Edge Functions, security headers, tests, CI, and a launch checklist.
+The [launch-ready-boilerplate](https://github.com/elisafabz/launch-ready-boilerplate) is a React, Vite, Tailwind, shadcn/ui and Supabase starter that applies these rules from the first commit: business logic in Edge Functions, security headers, tests, CI, and a launch checklist.
 
 ## Why hooks and not just prompts?
 
