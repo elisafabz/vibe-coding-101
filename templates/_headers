@@ -1,0 +1,14 @@
+# Security headers - applied to every response by Netlify.
+# Docs: https://docs.netlify.com/routing/headers/
+#
+# CSP note: connect-src only includes Supabase here. If you use PostHog,
+# Stripe, Meta Pixel, or other external services, add their domains to
+# connect-src and/or script-src.
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
