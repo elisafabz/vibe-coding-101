@@ -9,6 +9,17 @@ Guardrails for people who are new to AI-assisted coding ("vibe coding") with [Cl
 
 These two hooks fix exactly that. Two optional skills (below) build on them.
 
+## Why this exists
+
+AI coding assistants make it possible to build real software without years of experience. They also make it easy to do two risky things without noticing: publishing a secret, and approving a command you do not understand.
+
+This repository adds small safety nets so beginners can experiment without those two mistakes. Think of it as the seat belt, not the driving lesson.
+
+- **Who it is for:** people new to AI-assisted coding, including non-developers.
+- **Assumes:** Claude Code, a macOS or Linux shell, and `jq` for the hooks.
+- **Limits:** the secret scanner matches known key formats. It catches the common cases, not everything, so it is a guardrail, not a guarantee. Hooks run on every tool call, which adds a small delay.
+- **Design choice:** rules are enforced by hooks, not by prompts. A reminder in a prompt can be forgotten, a hook runs every time.
+
 ## Hooks
 
 Hooks are small shell scripts that Claude Code runs automatically around tool calls. They live in `~/.claude/hooks/` and are wired up in `~/.claude/settings.json`.
